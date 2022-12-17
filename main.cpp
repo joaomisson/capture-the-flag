@@ -3,6 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <pthread.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -10,18 +11,28 @@ WINDOW* game_window;
 pthread_mutex_t mutex;
 
 void* player(void* p){
+    int m;
 
     Player* player_x = (Player*) p;
 
-    do {
+    player_x->display();
+
+    //pthread_mutex_lock(&mutex);
+
+    while (m != 'x'){
+        //pthread_mutex_unlock(&mutex);
         pthread_mutex_lock(&mutex);
+        m = player_x->move();
         player_x->display();        
         wrefresh(game_window);
+        //sleep(0.1);
         pthread_mutex_unlock(&mutex);
-    } while (player_x->move() != 'x');
+    };
 
     return 0;
 }
+
+
 
 int main() {
     initscr();
@@ -55,18 +66,13 @@ int main() {
     // Character *enemy = new Character(game_window, 15, 15, 'X');
 
     pthread_mutex_init(&mutex, NULL);
-    pthread_t p1, p2;
+    pthread_t p2, p1;
 
     pthread_create(&p1, NULL, &player, player_one);
     pthread_create(&p2, NULL, &player, player_two);
 
     pthread_join(p1, NULL);
     pthread_join(p2, NULL);
-
-    //thread p1(player, player_one, game_window), p2(player, player_two, game_window);
-    //thread p2(player, player_two, game_window);
-    //p1.join();
-    //p2.join();
 
     /*do {
         player_one->display();

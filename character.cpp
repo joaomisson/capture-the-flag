@@ -84,6 +84,7 @@ int Player::move() {
     } else if (key == control_keys[RIGHT]) {
         move_right();
     }
+    else{ }
 
     return key;
 }
