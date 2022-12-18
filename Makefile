@@ -1,5 +1,5 @@
 all:
-	g++ main.cpp character.cpp character.hpp -o exec -g -s -lncursesw -Wall -Werror -pthread
+	g++ main.cpp character.cpp character.hpp -o exec -g -s -lncursesw -pthread
 
 run:
 	./exec

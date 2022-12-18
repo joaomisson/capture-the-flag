@@ -26,6 +26,7 @@ class Character {
         void display();
         int move();
         WINDOW *get_window();
+        char get_type();
 };
 
 class Player : public Character{
@@ -34,6 +35,7 @@ class Player : public Character{
     public:
         Player(WINDOW *win, int start_x, int start_y, char type, vector<int> keys);
         int move();
+        // char get_type();
 };
 
 #endif

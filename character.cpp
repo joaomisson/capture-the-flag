@@ -88,3 +88,9 @@ int Player::move() {
 
     return key;
 }
+
+char Character::get_type() {
+    return this->type;
+}
+
+
