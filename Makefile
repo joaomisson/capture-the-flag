@@ -1,5 +1,5 @@
 all:
-	g++ main.cpp character.cpp character.hpp -o exec -g -s -lncursesw -pthread
+	g++ main.cpp game.cpp game.hpp player.cpp player.hpp flag.cpp flag.hpp interface.cpp interface.hpp -o exec -g -s -lncursesw -pthread -Wall -Werror
 
 run:
 	./exec
