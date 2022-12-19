@@ -1,6 +1,4 @@
-// #include "character.hpp"
-
-#include "game.hpp"
+#include "includes/game.hpp"
 
 int main() {
     Game capture_flag = Game(5);

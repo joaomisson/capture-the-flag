@@ -1,4 +1,4 @@
-#include "game.hpp"
+#include "../includes/game.hpp"
 
 mutex input_mutex;
 

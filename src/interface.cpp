@@ -1,6 +1,6 @@
 #include <ncurses.h>
+#include <string>
 
-#include<string>
 using namespace std;
 
 void print_title(WINDOW *win) {

@@ -1,4 +1,4 @@
-#include "player.hpp"
+#include "../includes/player.hpp"
 
 enum directions {UP, RIGHT, DOWN, LEFT};
 
