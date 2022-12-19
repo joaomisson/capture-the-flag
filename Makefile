@@ -1,7 +1,9 @@
-all:
-	g++ main.cpp game.cpp game.hpp player.cpp player.hpp flag.cpp flag.hpp interface.cpp interface.hpp -o exec -g -s -lncursesw -pthread -Wall -Werror
+objects = main.cpp includes/*.hpp src/*cpp
 
-run:
+all: $(objects)
+	g++ $(objects) -o exec -g -s -lncursesw -pthread -Wall -Werror
+
+run: all
 	./exec
 
 valgrind:
