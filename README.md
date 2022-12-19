@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/50035537/208537656-7560cf95-8706-418c-aacb-99c54caa2e98.png)
 
-Projeto final para a disciplina de Sistemas Operacionais I (SSC0140) - ICMC|USP São Carlos
+Projeto final para a disciplina de Sistemas Operacionais I (SSC0140) - ICMC / USP São Carlos
 
 ### Instalação
 
