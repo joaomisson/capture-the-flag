@@ -1,3 +1,16 @@
+/**
+ * @file    game.hpp
+ * @author  Ana Lívia Ruegger Saldanha       8586691
+ *          Guilherme Souza Panza           12543519
+ *          João Antônio Misson Milhorim    11834331
+ *          Maria Victória Brandão Barros   12608692
+ * 
+ * @brief   Arquivo header para o módulo da classe do jogo.
+ * 
+ * @date    2022-12-19
+ * 
+ */
+
 #ifndef _GAME_H_
 #define _GAME_H_
 

@@ -1,3 +1,16 @@
+/**
+ * @file    flag.cpp
+ * @author  Ana Lívia Ruegger Saldanha       8586691
+ *          Guilherme Souza Panza           12543519
+ *          João Antônio Misson Milhorim    11834331
+ *          Maria Victória Brandão Barros   12608692
+ * 
+ * @brief   Módulo contendo as funções ligadas à classe da bandeira.
+ * 
+ * @date    2022-12-19
+ * 
+ */
+
 #include "../includes/flag.hpp"
 
 Flag::Flag() { };
