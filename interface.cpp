@@ -122,8 +122,8 @@ void print_end_message(WINDOW *win, int winner, int p1_points, int p2_points) {
                    \___/ \___|_| |_|\___\___|\__,_| (_)
 
     )");
-    mvwprintw(win, 18, 0, "JOGADOR 1: %d", p1_points);
-    mvwprintw(win, 19, 0, "JOGADOR 2: %d", p2_points);
+    mvwprintw(win, 18, 0, "JOGADOR 1: %d Pontos", p1_points);
+    mvwprintw(win, 19, 0, "JOGADOR 2: %d Pontos", p2_points);
     wrefresh(win);
     napms(10000);
     wclear(win);
@@ -148,8 +148,8 @@ void print_end_message(WINDOW *win, int winner, int p1_points, int p2_points) {
                  \___/ \___|_| |_|\___\___|\__,_| (_)        
                                                                                      
     )");
-    mvwprintw(win, 18, 0, "JOGADOR 1: %d", p1_points);
-    mvwprintw(win, 19, 0, "JOGADOR 2: %d", p2_points);
+    mvwprintw(win, 18, 0, "JOGADOR 1: %d Pontos", p1_points);
+    mvwprintw(win, 19, 0, "JOGADOR 2: %d Pontos", p2_points);
     wrefresh(win);
     napms(10000);
     wclear(win);
@@ -172,8 +172,8 @@ void print_end_message(WINDOW *win, int winner, int p1_points, int p2_points) {
                             |_|          
           
     )");
-    mvwprintw(win, 18, 0, "JOGADOR 1: %d", p1_points);
-    mvwprintw(win, 19, 0, "JOGADOR 2: %d", p2_points);
+    mvwprintw(win, 18, 0, "JOGADOR 1: %d Pontos", p1_points);
+    mvwprintw(win, 19, 0, "JOGADOR 2: %d Pontos", p2_points);
     wrefresh(win);
     napms(10000);
     wclear(win);
