@@ -7,6 +7,8 @@ void print_title(WINDOW *win);
 
 void print_countdown(WINDOW *win);
 
-void print_end_message(WINDOW *win, int winner);
+void print_end_message(WINDOW *win, int winner, int p1_points, int p2_points);
+
+void print_rules(WINDOW *win);
 
 #endif

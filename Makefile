@@ -8,7 +8,9 @@ valgrind:
 	valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-leak-kinds=all --show-reachable=yes ./main 
 
 zip:
-	zip projeto.zip main.cpp character.cpp character.hpp Makefile
+	zip projeto.zip main.cpp game.cpp game.hpp player.cpp player.hpp flag.cpp flag.hpp interface.cpp interface.hpp Makefile
 
 clean:
 	rm *.o exec
+
+	

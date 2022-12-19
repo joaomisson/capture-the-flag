@@ -21,12 +21,16 @@ int Player::get_points() {
     return this->points;
 }
 
-vector<int> Player::get_keys() {
-    return this->move_keys;
-}
+char Player::get_image() {
+    return this->image;
+};
 
 pair<int, int> Player::get_curr_pos() {
     return this->curr_pos;
+}
+
+vector<int> Player::get_keys() {
+    return this->move_keys;
 }
 
 void Player::set_curr_pos(pair<int, int> pos) {

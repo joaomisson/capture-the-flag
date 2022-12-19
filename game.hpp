@@ -6,7 +6,7 @@
 #include "flag.hpp"
 
 #include <string>
-// #include <pthread.h>
+#include <pthread.h>
 #include <thread>
 #include <mutex>
 #include <algorithm>
@@ -19,10 +19,11 @@ class Game {
         Player p1;
         Player p2;
         Flag f;
+        WINDOW *curr_win;
 
-        Player init_player(WINDOW *win, pair<int, int> start_pos, char image, vector<int> keys);
-        Flag init_flag(WINDOW *win, pair<int, int> pos, char image);      
-        void execute_round(WINDOW *win);
+        Player init_player(pair<int, int> start_pos, char image, vector<int> keys);
+        Flag init_flag(pair<int, int> pos, char image);      
+        void execute_round();
     
     public:
         Game(int num_rounds);

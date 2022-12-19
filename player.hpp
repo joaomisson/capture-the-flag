@@ -27,11 +27,12 @@ class Player {
         Player(WINDOW *win, pair<int, int> pos, char image, vector<int> move_keys);
         void add_points(int points);
         int get_points();
+        char get_image();
+        pair<int, int> get_curr_pos();
         vector<int> get_keys();
         void set_curr_pos(pair<int, int> pos);
         void move();
         void display();
-        pair<int, int> get_curr_pos();
         void reset_points();
 };
 
