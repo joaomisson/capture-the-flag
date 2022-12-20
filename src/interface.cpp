@@ -48,7 +48,7 @@ void print_rules(WINDOW *win) {
                               __/ |                     
                               |___/                                   
                                                                     
-    O jogo possui 10 rodadas. A cada rodada uma bandeira
+    O jogo possui 5 rodadas. A cada rodada uma bandeira
     aparecere em um local aleatoria do campo. O objetivo dos
     jogadores deve ser pegar a bandeira antes do seu inimigo.
     Quem pegar a bandeira primeiro ganha uma rodada. Quem ganhar
