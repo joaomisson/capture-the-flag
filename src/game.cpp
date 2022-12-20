@@ -34,6 +34,10 @@ Flag Game::init_flag(pair<int, int> start_pos, char image) {
 }
 
 void get_current_player(vector<int> keys, WINDOW *win) {
+    /* Como as duas threads vão estar acessando uma região crítica de memória
+       (uma variável de escopo global que ambas tem acesso) utilizamos um semáforo
+       binário especial (mutex) que trava o acesso simultaneo à variável global por
+       ambas as threads, permitindo que apenas uma thread tenha acesso à variável. */
     int input_key = 0;
     input_mutex.lock();
 
@@ -67,6 +71,15 @@ void Game::execute_round() {
         wrefresh(this->curr_win);
 
         while (!this->round_over) {
+            /* Aqui estamos criando duas threads, uma para cada player.
+               Criamos as threads para termos duas subrotinas executando concomitantemente.
+               É como se as threads "competissem" para ter acesso a movimentação
+               do seu respectivo player.
+               Essa "competição" é para criar uma mecânica no jogo e torna-lo mais divertido.
+               Por meio dessa "competição" de threads um player pode atrapalhar a movimentação
+               de seu inimigo, travando sua movimentação.
+               Utilizando-se dessa mecânica implementamos também um "roubo" de movimentos, ou seja,
+               Enquanto um player estiver movimentando o outro pode "roubar" o acesso à movimentação.*/
             thread t_p1(get_current_player, this->p1.get_keys(), this->curr_win);
             thread t_p2(get_current_player, this->p1.get_keys(), this->curr_win);
 
